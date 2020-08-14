@@ -1,0 +1,4 @@
+config.txt contiene los parametros de conexion a la base de datos la cual se encuentra en formato.sql en la carpeta data_base_clientes
+
+instalar postgresql junto a pg_admin4 y crear una base de datos nueva e importar la base de datos
+anteriormente nombrada y verificar la funcionalidad actual de la app

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <P>Registro de facturas por cliente</P>
+<style>
+    body { background-color: #9fd5d1; }
+    .redondeado {
+     border-radius: 5px;
+   }
+
+    .caja { 
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 100; 
+text-align: left; 
+background: #889ccf; 
+margin: 0 0 20px; 
+}
+  </style>
+<form method="POST">
+
+<p>CEDULA_CLIENTE:<input type="text" class="redondeado" name="inputCedula" placeholder="Ingrese cedula"></p>
+  <p>CANTIDAD_PRODUCTOS: <input type="text" class ="redondeado" name="inputCantidad_productos" placeholder="Cantidad productos"></p>
+ 
+  <p>VALOR_TOTAL: <input type="text" class ="redondeado"  name="inputValortotal"placeholder="Valor Total"></p>
+  <p>METODO_PAGO: <input type="text" class ="redondeado" name="inputMetodo_pago"placeholder="efectivo-tarjeta"></p>
+  <p>CODIGO_PRODUCTOS: <input type="text" class ="redondeado" name="inputProductos" placeholder="cod_1,cod_2..">Codigo de productos separados por , EJ:cod1,cod2</p>
+  <div class="caja">NOTA:LOS CODIGOS DE PRODUCTOS A REGISTRAR EN LA FACTURA DEBEN ESTAR REGISTRADOS EN EL SISTEMA DE LO CONTRARIO NO SE PODRAN AGREGAR A SU FACTURA ACTUAL</div>
+
+     <input type="reset" value="RESTAURAR FORMULARIO">
+  <p>
+    <input type="submit" value="REGISTRAR FACTURA">
+  </p>
+
+</form>
+
+
+ </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">INICIO</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Panel de interaccion</h3>
+      </div>
+      
+  </body>
+</html>
+
+
+
+
+
+
+
+

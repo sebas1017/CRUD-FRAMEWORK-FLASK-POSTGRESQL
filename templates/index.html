@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>APP Responsive - CLIENTES</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/datepicker3.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+  </head>
+ <body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button>
+          <a class="navbar-brand" href="#"><span>CLIENT</span></a>
+          <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <em class="fa fa-envelope"></em>
+            </a>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <em class="fa fa-bell"></em>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564400-account_81513.png" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">USER</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<form role="search">
+		
+		</form>
+		<ul class="nav menu">
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+				<em class="fa fa-navicon">&nbsp;</em> CLIENTES <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li><a class="" href="/consultClients">
+						<span class="fa fa-arrow-right">&nbsp;</span> REGISTRAR
+					</a></li>
+					<li><a class="" href="/showDelete">
+						<span class="fa fa-arrow-right">&nbsp;</span> ELIMINAR
+					</a></li>
+					<li><a class="" href="/consultarClientes">
+						<span class="fa fa-arrow-right">&nbsp;</span> CONSULTAR
+					</a></li>
+				</ul>
+      </li>
+      
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-2">
+				<em class="fa fa-navicon">&nbsp;</em> PRODUCTOS <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-2">
+					<li><a class="" href="registerProducts">
+						<span class="fa fa-arrow-right">&nbsp;</span> REGISTRAR
+					</a></li>
+					<li><a class="" href="/deleteProducts">
+						<span class="fa fa-arrow-right">&nbsp;</span> ELIMINAR
+					</a></li>
+					<li><a class="" href="/showProducts">
+						<span class="fa fa-arrow-right">&nbsp;</span> CONSULTAR
+          </a></li>
+          <li><a class="" href="/inactiveProducts">
+						<span class="fa fa-arrow-right">&nbsp;</span> ACT-DESA
+          </a></li>
+          <li><a class="" href="/consultarProductosinactivos">
+						<span class="fa fa-arrow-right">&nbsp;</span> INACTIVOS
+					</a></li>
+				</ul>
+			</li>
+	
+	<li class="parent "><a data-toggle="collapse" href="#sub-item-3">
+				<em class="fa fa-navicon">&nbsp;</em> FACTURAS <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-3">
+					<li><a class="" href="registerFacture">
+						<span class="fa fa-arrow-right">&nbsp;</span> REGISTRAR
+					</a></li>
+					<li><a class="" href="/showFacture">
+						<span class="fa fa-arrow-right">&nbsp;</span> CONSULTAR
+					</a></li>
+					<li><a class="" href="/showFacture_temporary">
+						<span class="fa fa-arrow-right">&nbsp;</span> TEMPORALES
+          </a></li>
+          <li><a class="" href="/showFacture_client">
+						<span class="fa fa-arrow-right">&nbsp;</span> FACTS-CLIENT
+          </a></li>
+         
+				</ul>
+			</li>
+
+
+
+
+
+			<li><a href="/"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+
+  <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">INICIO</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+        <div class="jumbotron">
+          <h1>APP Responsive - CLIENTES</h1>
+            <p>Bienvenido Acontinuacion presentaremos las opciones disponibles</p>
+        </div>
+			</div>
+    </div><!--/.row-->
+		
+		<div class="row">		
+			<div class="col-md-12">
+				<div class="panel panel-default ">
+					<div class="panel-heading">
+						
+					
+            <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+          </div>
+					<div class="panel-body timeline-container">
+            
+					</div>
+				</div>
+			</div><!--/.col-->
+			<div class="col-sm-12">
+				<p class="back-link">Cali 2020</p>
+			</div>
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+ 
+    <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/chart-data.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/easypiechart.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/easypiechart-data.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script>
+      window.onload = function () {
+    var chart1 = document.getElementById("line-chart").getContext("2d");
+    window.myLine = new Chart(chart1).Line(lineChartData, {
+    responsive: true,
+    scaleLineColor: "rgba(0,0,0,.2)",
+    scaleGridLineColor: "rgba(0,0,0,.05)",
+    scaleFontColor: "#c5c7cc"
+    });
+  };
+    </script>
+ </body>
+  </html>

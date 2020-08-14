@@ -1,0 +1,77 @@
+CREATE TABLE public.facturas (
+	cod_factura serial NOT NULL,
+	id_cliente int4 NULL,
+	cantidad_productos int4 NULL,
+	fecha_compra date NULL,
+	val_total float8 NULL,
+	metodo_pago varchar NULL,
+	CONSTRAINT clientes_facturas_pkey PRIMARY KEY (cod_factura),
+	CONSTRAINT fk_clientes_facturas FOREIGN KEY (id_cliente) REFERENCES clientes(cedula)
+);
+-----------------------------------------------------------------------------------------
+
+ALTER TABLE public.facturas 
+DROP CONSTRAINT fk_clientes_facturas,
+ADD CONSTRAINT fk_clientes_facturas
+   FOREIGN KEY (id_cliente)
+   REFERENCES clientes (cedula)
+   ON DELETE CASCADE;
+----------------------------------------------------------------------------------------------
+CREATE TABLE public.clientes (
+	cedula  int4,
+	nombre_cliente varchar(45) NULL,
+	direccion varchar(45) NULL,
+	telefono varchar(45) NULL,
+	CONSTRAINT clientes_pkey PRIMARY KEY (cedula)
+);
+
+------------------------------------------------------------------------------------------------
+CREATE TABLE public.detalle_factura (
+	id_codigo_detalle serial NOT NULL,
+	id_factura int4 NOT NULL,
+	id_producto int4 NULL,
+	CONSTRAINT clientes_detalles_facturas_pkey PRIMARY KEY (id_codigo_detalle, id_factura),
+------------------------------------------------------------------------------------------------
+
+CREATE TABLE public.productos (
+	cod_prod int4 NOT NULL,
+	categoria varchar(50) NULL,
+	nombre varchar(40) NULL,
+	precio float8 NULL,
+	cantidad_bodega int4 NULL,
+	estado varchar(20) NULL,
+	CONSTRAINT clientes_productos_pkey PRIMARY KEY (cod_prod)
+);
+-------------------------------------------------------------------------------
+CREATE OR REPLACE FUNCTION public.create_my_temp_table(identificacion integer)
+ RETURNS void
+ LANGUAGE plpgsql
+AS $function$
+begin
+    insert into temporal.facturas_borradas ( select * from facturas where id_cliente  = identificacion);
+   delete from clientes  where cedula  = identificacion;
+end $function$
+;
+-------------------------------------------------------------------------------------
+select
+	count(*) as cantidad_facturas ,
+	id_cliente as cedula,
+	d.nombre_cliente,
+	sum(val_total) as val_total,
+	cod_factura
+from
+	facturas a ,
+	detalle_factura b ,
+	productos c,
+	clientes d
+where
+	a.cod_factura = b.id_factura
+	and b.id_producto = c.cod_prod
+	and a.id_cliente = d.cedula
+group by
+	id_cliente ,
+	d.nombre_cliente ,
+	val_total ,
+	cod_factura
+order by 1 
+--------------------------------ordenamiento de clientes por cantidad de facturas por cliente

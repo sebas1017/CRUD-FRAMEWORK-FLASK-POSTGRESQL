@@ -1,0 +1,39 @@
+    { 
+            "nombre_producto" : "sudadera adidas", 
+            "codigo_producto" : "2164289-4", 
+            "precio_venta":50000,
+            "seccion_tienda":"ROPA JUVENIL",
+            "unidades_vendidas":20,
+              
+            "compradores" : [
+              {	"nombre_comprador":"dilan castillo",
+                    "cedula": "2232204",
+                    "codigo_comprador" : "1111",
+               "unidades_compradas":10
+                }, 
+                {
+                   "nombre_comprador":"dilan castillo",
+                    "cedula": "2232204",
+                    "codigo_comprador" : "1111",
+               "unidades_compradas":10
+                }
+            ], 
+              "vendedores":[
+              {	"nombre_vendedor":"leonardo lopez",
+                    "cedula": "2232204",
+                    "codigo_vendedor" : "4598",
+               "unidades_vendidas_individual":10
+                }, 
+                {"nombre_vendedor":"carlos ramirez",
+                    "cedula": "4577",
+                    "codigo_vendedor" : "1111",
+               "unidades_vendidas_individual":10
+                }
+            ]
+            
+              
+    }
+
+
+
+
