@@ -1,1 +1,1 @@
-host=localhost dbname=Clientes user=postgres password=python
+host=localhost dbname=Q2xpZW50ZXM= user=cG9zdGdyZXM= password=cHl0aG9u
