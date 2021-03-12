@@ -4,3 +4,6 @@ prueba tecnica utilizando el framework flask ,y python  en el directorio se encu
 el archivo config.txt tiene los parametros de conexion encriptados en base 64 se pueden decodificar de manera online
 se debe tener correctamente instalado flask, y las librerias que se usan en el proyecto luego se corre de forma local y se puede visualizar 
 en localhost
+
+
+![alt text](https://github.com/sebas1017/CRUD-FRAMEWORK-FLASK-POSTGRESQL/blob/master/Captura_home.png)
